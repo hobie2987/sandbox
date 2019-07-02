@@ -1,0 +1,72 @@
+{
+  "name": "sandbox",
+  "version": "0.0.0",
+  "description": "Sandbox - Express Application",
+  "author": "Eric Hobensack",
+  "license": "None",
+  "repository": {
+    "type": "Git",
+    "url": "https://github.com/hobie2987/sandbox.git"
+  },
+  "engines": {
+    "node": "8.x.x"
+  },
+  "deployment": {
+    "local": {
+      "NODE_ENV": "local"
+    },
+    "test": {
+      "NODE_ENV": "test"
+    },
+    "production": {
+      "NODE_ENV": "production"
+    }
+  },
+  "main": "server.js",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "grunt": "^1.0.3",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-connect": "^2.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "load-grunt-tasks": "^4.0.0",
+    "grunt-express-server": "^0.5.4",
+    "node-watch": "^0.6.2",
+    "yargs": "^13.2.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "csurf": "^1.9.0",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.4",
+    "express-csp-header": "^2.2.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^6.0.1",
+    "handlebars": "^4.0.12",
+    "helmet": "^3.18.0",
+    "html-minifier": "^3.5.20",
+    "lodash": "^4.17.11",
+    "memorystore": "^1.6.0",
+    "morgan": "^1.9.1",
+    "npm": "^6.4.1",
+    "request": "^2.88.0",
+    "rxjs": "^6.5.2",
+    "serve-favicon": "^2.5.0",
+    "serve-static": "^1.13.2",
+    "tasktimer": "^2.0.1"
+  },
+  "files": [
+    "./dist",
+    "./app"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "https-env": "cross-env HTTPS=true"
+  }
+}
