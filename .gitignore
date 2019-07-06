@@ -1,0 +1,19 @@
+# IDE config
+.idea/
+
+# Dependency directories
+node_modules/
+
+# Packaging
+dist/
+
+# Reporting and coverage
+reports/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Grunt
+.grunt
