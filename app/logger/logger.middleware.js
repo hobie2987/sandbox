@@ -6,16 +6,18 @@ const Logger = require('./logger.service.'),
     dateformat = require('dateformat');
 
 module.exports = (request, response, next) => {
-    const logger = new Logger({
-        'app-name': pkg.name,
-        version: pkg.version
-    });
+    const headers = request.headers || {},
+        logger = new Logger({
+            'app-name': pkg.name,
+            version: pkg.version
+        });
 
     logger.info({
         'request-url': request.url,
         'method': request.method,
         'session-id': request.session.id,
-        'user-agent': request.headers['user-agent'],
+        'user-agent': headers['user-agent'],
+        'ip-address': headers['x-forwarded-for'] || request.connection.remoteAddress,
         date: dateformat('default'),
         message: 'Request details'
     }, LogCodes.REQUEST_DETAILS);

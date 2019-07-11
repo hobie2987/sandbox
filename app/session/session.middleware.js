@@ -5,7 +5,7 @@ const router = require('express').Router(),
     MemoryStore = require('memorystore')(session);
 
 router.use(session({
-    name: 'creative-sisters.sid',
+    name: 'sandbox.sid',
     resave: false,
     saveUninitialized: true,
     secret: 'sandbox',

@@ -17,3 +17,6 @@ npm-debug.log*
 
 # Grunt
 .grunt
+
+# Misc
+package-lock.json
