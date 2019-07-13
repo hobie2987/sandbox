@@ -10,7 +10,8 @@ router.use(function (request, response) {
 
     response.render('index.html', {
         layout: false,
-        title: 'Creative Sisters'
+        title: 'Sandbox',
+        baseHref: request.baseUrl
     });
 });
 

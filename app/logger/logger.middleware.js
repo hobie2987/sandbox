@@ -13,7 +13,7 @@ module.exports = (request, response, next) => {
         });
 
     logger.info({
-        'request-url': request.url,
+        'url': request.originalUrl,
         'method': request.method,
         'session-id': request.session.id,
         'user-agent': headers['user-agent'],
