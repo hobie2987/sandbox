@@ -41,6 +41,7 @@
     "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "csurf": "^1.9.0",
     "dateformat": "^3.0.3",
     "express": "^4.16.4",

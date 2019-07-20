@@ -2,13 +2,14 @@
 
 const router = require('express').Router(),
     session = require('express-session'),
+    secret = require('../secret/secret')();
     MemoryStore = require('memorystore')(session);
 
 router.use(session({
     name: 'sandbox.sid',
     resave: false,
     saveUninitialized: true,
-    secret: 'sandbox',
+    secret: secret,
     cookie: {
         secure: process.env.HTTPS,
         maxAge: 60000 * 30, // 30 minutes
