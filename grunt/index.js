@@ -1,10 +1,12 @@
-module.exports = {
+/*globals module:true, require:true*/
 
-    jshint: require('./jshint'),
-    watch: require('./watch'),
+module.exports = {
     clean: require('./clean'),
     copy: require('./copy'),
-    express: require('./express'),
+    download: require('./download'),
+    env: require('./env'),
     exec: require('./exec'),
-    env: require('./env')
+    express: require('./express'),
+    jshint: require('./jshint'),
+    watch: require('./watch')
 };

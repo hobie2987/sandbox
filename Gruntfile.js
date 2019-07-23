@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     grunt.initConfig(require('./grunt'));
 
     // Custom tasks
-    grunt.registerTask('package', ['clean', 'copy:dist']);
+    grunt.registerTask('package', ['clean', 'copy:dist', 'download']);
     grunt.registerTask('server', [ 'express:server', 'watch' ]);
     grunt.registerTask('develop', ['package', 'env:local','server']);
     grunt.registerTask('develop-secure', ['package', 'env:local-secure', 'server']);

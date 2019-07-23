@@ -1,3 +1,4 @@
+/*globals module:true, require:true */
 const _ = require('lodash');
 const pkg = require('../../package');
 
