@@ -1,5 +1,6 @@
 # IDE config
 .idea/
+.vscode/
 
 # Dependency directories
 node_modules/
@@ -9,6 +10,7 @@ dist/
 
 # Reporting and coverage
 reports/
+coverage
 
 # Logs
 logs
@@ -20,3 +22,6 @@ npm-debug.log*
 
 # Misc
 package-lock.json
+.DS_Store
+Thumbs.db
+Desktop.ini
