@@ -2,7 +2,7 @@
 
 const router = require('express').Router(),
     session = require('express-session'),
-    secret = require('../secret/secret')();
+    secret = require('../secret/secret')(15);
     MemoryStore = require('memorystore')(session);
 
 router.use(session({
