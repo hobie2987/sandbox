@@ -1,4 +1,5 @@
 /*global module:true, require:true*/
+
 const router = require('express').Router();
 const { LoggerRoute, LoggerValidator, LoggerMiddleware } = require('./logger');
 const { RequestValidator } = require('./request-validator');

@@ -1,4 +1,4 @@
-/*global module:true*/
+/*global module:true, require:true*/
 
 const router = require('express').Router(),
     LogCodes = require('../logger/log-codes'),
