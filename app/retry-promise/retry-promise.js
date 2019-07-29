@@ -1,3 +1,5 @@
+/*globals module*/
+
 /**
  * Initialize a RetryPromise with a provided executor
  *
@@ -56,7 +58,7 @@ RetryPromise.prototype.retry = async function(max) {
             .then((value) => { success = true; return value; })
             .catch((reason) => reason);
 
-        console.warn(`Attempt: ${i+1}, Result: ${result}, Success: ${success}`);
+        // console.warn(`Attempt: ${i+1}, Success: ${success}`);
 
         if (success) {
             return Promise.resolve(result);
