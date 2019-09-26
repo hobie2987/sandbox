@@ -1,7 +1,7 @@
 /*global module:true, require:true, __dirname:true*/
 
 var express = require('express'),
-    router = express.Router()
+    router = express.Router(),
     path = require('path'),
     favicon = require('serve-favicon'),
     STATIC_PATH = '/pkg/web';

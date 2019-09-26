@@ -9,7 +9,7 @@ const HttpRequest = require('./http.service');
 // });
 
 
-HttpRequest.all([
+Promise.all([
     new HttpRequest('https://google.com').get(),
     new HttpRequest('https://jsonplaceholder.typicode.com/users').get(),
     new HttpRequest('https://jsonplaceholder.typicode.com/posts').get()

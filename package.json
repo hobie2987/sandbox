@@ -38,6 +38,8 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "busboy": "^0.3.1",
+    "cheerio": "^1.0.0-rc.3",
     "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.5",

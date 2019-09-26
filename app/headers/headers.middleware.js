@@ -2,7 +2,8 @@
 
 const router = require('express').Router(),
     helmet = require('helmet'),
-    csp = require('express-csp-header/index');
+    csp = require('express-csp-header/index'),
+    policies = require('./csp');
 
 /**
  * Security headers
@@ -13,15 +14,6 @@ router.use(helmet.noCache());
 /**
  * Content Security Policies
  */
-router.use(csp({
-        policies: {
-            'default-src': ['\'self\''],
-            'script-src': ['\'self\'', '\'unsafe-eval\'', 'https://code.jquery.com'],
-            'style-src': ['\'self\'', '\'unsafe-inline\''],
-            'object-src': ['\'self\''],
-            'img-src': ['\'self\'', 'data:']
-        }
-    }
-));
+router.use(csp({ policies: policies }));
 
 module.exports = router;
