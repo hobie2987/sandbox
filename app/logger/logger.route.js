@@ -1,10 +1,14 @@
 /*globals module:true, require:true*/
 
 module.exports = (request, response) => {
-    const logger = request.logger,
-        code = request.body['log-code'];
+    const logger = request.logger;
+    const body = request.body;
+    const code = body['log-code'];
+    const level = body.level;
 
-    logger.info(request.body, code);
+    console.log(request.body);
+
+    logger[level](request.body, code);
 
     response.status(200).send('Log Success!');
 };

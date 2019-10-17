@@ -1,8 +1,7 @@
 /*global module:true, require:true*/
 
 const router = require('express').Router(),
-    LogCodes = require('../logger/log-codes'),
-    path = require('path');
+    LogCodes = require('../logger/log-codes');
 
 router.use(require('../headers/headers.middleware'));
 
@@ -15,7 +14,7 @@ router.use(function (request, response) {
         layout: false,
         title: 'Sandbox',
         baseHref: baseHref,
-        static: path.join(baseHref, 'pkg', 'web')
+        static: [baseHref, 'pkg', 'web'].join('/')
     });
 });
 
