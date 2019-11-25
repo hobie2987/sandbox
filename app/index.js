@@ -1,32 +1,17 @@
 /*global module:true, require:true*/
 
 const router = require('express').Router();
-const { LoggerRoute, LoggerValidator, LoggerMiddleware } = require('./logger');
-const { RequestValidator } = require('./request-validator');
 
-// Serve static resources (JS and CSS)
+// Serve static resources (JS, CSS, & JSON)
 router.use(require('./routes/static-resources'));
 
-// CSRF
-router.use(require('./csrf/csrf.middleware.js'));
+// Common request filters and middleware
+router.use(require('./filters/filter.router'));
 
-// Initialize/Update active session
-router.use(require('./session/session.middleware'));
+// RESTful Endpoints
+router.use(require('./routes/endpoints.router'));
 
-// Add new Logger to request
-router.use(LoggerMiddleware);
-
-// JSON files
-router.use('/json', require('./json/json.route'));
-
-// Logs memory usage
-router.use(require('./memory-monitor/memory-monitor.middleware'));
-
-// POST
-router.post('/log', LoggerValidator, RequestValidator, LoggerRoute);
-
-// GET
-router.get('/google', require('./request-proxy/request-proxy')('https://google.com/'));
+// Default GET request handler
 router.get('/*', require('./routes/default'));
 
 // Error Handling
