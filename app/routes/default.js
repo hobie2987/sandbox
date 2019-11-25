@@ -3,8 +3,6 @@
 const router = require('express').Router(),
     LogCodes = require('../logger/log-codes');
 
-router.use(require('../headers/headers.middleware'));
-
 router.use(function (request, response) {
     const baseHref = request.baseUrl;
 
