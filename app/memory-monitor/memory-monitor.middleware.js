@@ -14,7 +14,7 @@ module.exports = (request, response, next) => {
         const heapTotal = bytesToMB(memory.heapTotal);
         const heapUsed = bytesToMB(memory.heapUsed);
 
-        logger.warn({
+        logger.info({
             'message': 'Memory usage in MB',
             'resident-set': bytesToMB(memory.rss),
             'total-heap': heapTotal,
