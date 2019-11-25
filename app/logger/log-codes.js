@@ -1,4 +1,8 @@
 module.exports = {
     REQUEST_DETAILS: 0,
-    RENDERING_VIEW: 1
+    RENDERING_VIEW: 1,
+    FILE_UPLOAD: 2,
+    INVALID_XSRF_TOKEN: 3,
+    SERVER_ERROR: 4,
+    NOT_FOUND: 404
 };
