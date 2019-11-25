@@ -6,9 +6,7 @@ module.exports = (request, response) => {
     const code = body['log-code'];
     const level = body.level;
 
-    console.log(request.body);
-
     logger[level](request.body, code);
 
-    response.status(200).send('Log Success!');
+    response.sendStatus(200);
 };
