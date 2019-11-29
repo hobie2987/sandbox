@@ -16,6 +16,11 @@ router.use(require('../session/session.middleware'));
 router.use(require('../logger/logger.middleware'));
 
 /**
+ * Generate logs containing call performance in milliseconds
+ */
+router.use(require('../performance/performance.middleware.js'));
+
+/**
  * Generates info logs containing statistics of the
  * current application memory usage.
  */

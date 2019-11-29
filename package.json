@@ -63,7 +63,6 @@
     "request-promise": "^4.2.4",
     "request": "^2.88.0",
     "rxjs": "^6.5.2",
-    "serve-favicon": "^2.5.0",
     "serve-static": "^1.13.2",
     "tasktimer": "^2.0.1"
   },

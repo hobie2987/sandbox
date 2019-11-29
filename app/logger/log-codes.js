@@ -3,6 +3,7 @@ module.exports = {
     RENDERING_VIEW: 1,
     FILE_UPLOAD: 2,
     INVALID_XSRF_TOKEN: 3,
-    SERVER_ERROR: 4,
-    NOT_FOUND: 404
+    PERFORMANCE: 5,
+    NOT_FOUND: 404,
+    SERVER_ERROR: 500
 };
