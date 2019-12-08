@@ -7,7 +7,7 @@ module.exports = (request, response, next) => {
 
     response.on('finish', () => {
         const end = Date.now();
-        logger.error({
+        logger.info({
             message: 'Call performance',
             ms: (end - start),
             url: request.originalUrl,
