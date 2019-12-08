@@ -4,14 +4,12 @@ const LogCodes = require('../logger/log-codes');
 
 module.exports = (request, response, next) => {
 
-    const contentType = request.headers['content-type'];
-    if (!contentType.startsWith('multipart/form-data')) {
+    if (!request.is('multipart/form-data')) {
         next();
         return;
     }
 
     request.files = request.files || {};
-
     const logger = request.logger;
     const busboy = new Busboy({headers: request.headers});
     request.pipe(busboy);
