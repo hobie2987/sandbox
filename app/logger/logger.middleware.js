@@ -1,6 +1,6 @@
 /*global module:true, require:true*/
 
-const Logger = require('./logger.service.'),
+const Logger = require('./logger.service'),
     LogCodes = require('./log-codes'),
     pkg = require('../../package'),
     dateformat = require('dateformat');
