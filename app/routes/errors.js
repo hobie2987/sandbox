@@ -5,16 +5,12 @@ module.exports = (error, request, response, next) => {
     const logger = request.logger || new Logger({});
 
     logger.error({
-        message: 'Server Error',
-        statusCode: error.statusCode || 'N/A',
+        message: error.message,
+        status: error.status || 'N/A',
         name: error.name,
-        error: error.message,
         stacktrace: error.stack
     }, LogCodes.SERVER_ERROR);
 
-    if (error.statusCode) {
-        response.sendStatus(error.statusCode);
-    } else {
-        response.sendStatus(500);
-    }
+    response.status(error.status || 500);
+    response.json({ message: error.message });
 };

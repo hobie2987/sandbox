@@ -4,6 +4,5 @@ module.exports = {
     FILE_UPLOAD: 2,
     INVALID_XSRF_TOKEN: 3,
     PERFORMANCE: 5,
-    NOT_FOUND: 404,
-    SERVER_ERROR: 500
+    SERVER_ERROR: 999
 };
