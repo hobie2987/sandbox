@@ -2,18 +2,14 @@
 
 const router = require('express').Router(),
     helmet = require('helmet'),
-    csp = require('express-csp-header/index'),
-    policies = require('./csp');
+    directives = require('./csp'),
+    nocache = require('nocache');
 
 /**
  * Security headers
  */
 router.use(helmet());
-router.use(helmet.noCache());
-
-/**
- * Content Security Policies
- */
-router.use(csp({ policies: policies }));
+router.use(helmet.contentSecurityPolicy({directives: directives}))
+router.use(nocache());
 
 module.exports = router;

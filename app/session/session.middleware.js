@@ -1,6 +1,7 @@
 /*global module:true, require:true*/
 
 const router = require('express').Router(),
+    PKG = require('../../package.json'),
     session = require('express-session'),
     secret = require('../secret/secret')(15);
     MemoryStore = require('memorystore')(session);
@@ -13,7 +14,7 @@ router.use(session({
     cookie: {
         secure: process.env.HTTPS,
         maxAge: 60000 * 30, // 30 minutes
-        path: '/',
+        path: `/${PKG.name}`,
         httpOnly: true
     },
     store: new MemoryStore({
