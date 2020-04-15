@@ -1,7 +1,21 @@
 {
-  "default-src": ["'self'"],
-  "script-src": ["'self'", "'unsafe-eval'", "https://code.jquery.com"],
-  "style-src": ["'self'", "'unsafe-inline'"],
-  "object-src": ["'self'"],
-  "img-src": ["'self'", "data:"]
+  "defaultSrc": [
+    "'self'"
+  ],
+  "scriptSrc": [
+    "'self'",
+    "'unsafe-eval'",
+    "https://code.jquery.com"
+  ],
+  "styleSrc": [
+    "'self'",
+    "'unsafe-inline'"
+  ],
+  "objectSrc": [
+    "'self'"
+  ],
+  "img-src": [
+    "'self'",
+    "data:"
+  ]
 }
